@@ -19,5 +19,11 @@ pipeline {
       }
     }
 
+    stage('deploy service') {
+      steps {
+        bat 'msbuild src\\\\MyWindowsService\\\\MyWIndowsService\\\\Deploy-Windows-Service-Via-MSBuild.proj'
+      }
+    }
+
   }
 }
